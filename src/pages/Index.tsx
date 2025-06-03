@@ -1,203 +1,80 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Star, Users, Clock, Award, Shield, BookOpen, MessageCircle } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { CheckCircle, Users, Clock, Award, MessageCircle, Shield, Star, ArrowRight, Palette, BookOpen, Video, Download } from "lucide-react";
 
 const Index = () => {
-  const scrollToPrice = () => {
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const testimonials = [
-    {
-      name: "Sarah Martinez",
-      photo: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
-      text: "I went from complete beginner to drawing portraits I'm actually proud of. Gleiverson's method is incredible!",
-      rating: 5
-    },
-    {
-      name: "David Chen",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-      text: "The step-by-step approach made it so easy to follow. I never thought I could draw realistic faces until now.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-      text: "Best investment I've made in my artistic journey. The community support is amazing too!",
-      rating: 5
-    }
-  ];
-
-  const courseHighlights = [
-    {
-      icon: Clock,
-      title: "Lifetime Access",
-      description: "Learn at your own pace with unlimited access to all course materials"
-    },
-    {
-      icon: BookOpen,
-      title: "Step-by-Step Training",
-      description: "Progressive lessons that build your skills from basic shapes to photorealistic portraits"
-    },
-    {
-      icon: MessageCircle,
-      title: "Direct Instructor Support",
-      description: "Get personalized feedback and guidance from Gleiverson himself"
-    },
-    {
-      icon: Users,
-      title: "Exclusive Community",
-      description: "Join a supportive community of fellow artists sharing their journey"
-    },
-    {
-      icon: Award,
-      title: "Certificate of Completion",
-      description: "Earn a professional certificate to showcase your new skills"
-    },
-    {
-      icon: Shield,
-      title: "7-Day Money-Back Guarantee",
-      description: "Risk-free learning with our satisfaction guarantee"
-    }
-  ];
-
-  const modules = [
-    {
-      number: "01",
-      title: "Foundation & Materials",
-      topics: ["Essential drawing tools", "Paper selection", "Basic techniques", "Setting up your workspace"]
-    },
-    {
-      number: "02", 
-      title: "Facial Anatomy & Proportions",
-      topics: ["Understanding facial structure", "Measuring techniques", "Common proportion mistakes", "Practice exercises"]
-    },
-    {
-      number: "03",
-      title: "Shading & Light",
-      topics: ["Light source understanding", "Shadow mapping", "Blending techniques", "Creating depth"]
-    },
-    {
-      number: "04",
-      title: "Realistic Features",
-      topics: ["Drawing eyes in detail", "Nose and mouth techniques", "Hair rendering", "Skin texture"]
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20 px-4">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-6 py-20 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30">
-                ⭐ Join Over 10,000 Students
-              </Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                Learn to Draw Stunning 
-                <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                  Realistic Portraits
-                </span>
-              </h1>
-              <p className="text-xl lg:text-2xl text-emerald-100 leading-relaxed">
-                Even if you've never drawn before. Transform your artistic skills from scratch with proven techniques.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold px-8 py-4 text-lg"
-                  onClick={scrollToPrice}
-                >
-                  Start Learning Today
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg"
-                >
-                  Watch Preview
-                </Button>
-              </div>
+        <div className="relative max-w-6xl mx-auto text-center">
+          {/* Dynamic Logo */}
+          <div className="mb-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-gray-600 to-gray-400 mb-4">
+              <Palette className="w-10 h-10 text-white" />
             </div>
-            <div className="relative">
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <img 
-                  src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=500&h=600&fit=crop" 
-                  alt="Portrait drawing demonstration"
-                  className="rounded-xl w-full"
-                />
-                <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">
-                  ✨ From Beginner to Pro
-                </div>
-              </div>
-            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent">
+              Realistic Portraits with Gleiverson Duarte
+            </h1>
           </div>
+          
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Learn to Draw Stunning Realistic Portraits – Even If You've Never Drawn Before
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join over 10,000 students transforming their artistic skills from scratch.
+          </p>
+          <Button size="lg" className="bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-600 hover:to-gray-400 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105">
+            Start Learning Today
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </section>
 
       {/* About the Instructor */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=600&fit=crop&crop=face" 
-                alt="Professor Gleiverson Duarte"
-                className="rounded-2xl w-full max-w-md mx-auto"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-emerald-500 text-white px-6 py-3 rounded-lg">
-                <div className="text-sm font-medium">20+ Years</div>
-                <div className="text-xs">Experience</div>
-              </div>
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="w-64 h-64 rounded-full bg-gradient-to-br from-gray-300 to-gray-500 flex items-center justify-center">
+              <span className="text-6xl text-white font-bold">GD</span>
             </div>
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-gray-900">
-                Meet Your Instructor
-                <span className="block text-emerald-600">Gleiverson Duarte</span>
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                With over 20 years of experience in graphite portrait realism, Professor Gleiverson Duarte has mastered the art of teaching complex drawing techniques in simple, digestible steps.
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Meet Your Instructor</h3>
+              <h4 className="text-2xl font-semibold text-gray-700 mb-4">Professor Gleiverson Duarte</h4>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                With over 20 years of experience in graphite portrait realism, Professor Gleiverson has taught thousands of students worldwide. His patient teaching style and proven methodology have helped complete beginners create stunning, professional-quality portraits.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                His unique approach has helped thousands of students transform from complete beginners to confident portrait artists. Gleiverson believes that anyone can learn to draw with the right guidance and practice.
-              </p>
-              <div className="flex items-center gap-4 text-emerald-600">
-                <Star className="w-5 h-5 fill-current" />
-                <span className="font-semibold">4.9/5 Average Student Rating</span>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Course Highlights */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose This Course?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Everything you need to master realistic portrait drawing, backed by proven teaching methods.
-            </p>
-          </div>
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our Course?</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {courseHighlights.map((highlight, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <highlight.icon className="w-8 h-8 text-emerald-600" />
+            {[
+              { icon: Clock, title: "Lifetime Access", description: "Learn at your own pace with unlimited access to all materials" },
+              { icon: BookOpen, title: "Step-by-Step Training", description: "Follow our proven methodology from basic shapes to photorealistic portraits" },
+              { icon: MessageCircle, title: "Direct Support", description: "Get personal feedback and guidance from Professor Gleiverson" },
+              { icon: Users, title: "Exclusive Community", description: "Join a supportive community of fellow artists and share your progress" },
+              { icon: Award, title: "Certificate of Completion", description: "Receive an official certificate to showcase your new skills" },
+              { icon: Download, title: "Bonus Materials", description: "Access exclusive reference photos and drawing templates" }
+            ].map((highlight, index) => (
+              <Card key={index} className="text-center p-6 border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-gray-400">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-to-r from-gray-600 to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <highlight.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {highlight.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {highlight.description}
-                  </p>
+                  <CardTitle className="text-gray-900">{highlight.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600">{highlight.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -206,38 +83,30 @@ const Index = () => {
       </section>
 
       {/* Course Content */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What You'll Learn
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A comprehensive curriculum designed to take you from beginner to advanced portrait artist.
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-2 gap-8">
-            {modules.map((module, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="w-12 h-12 bg-emerald-500 text-white rounded-lg flex items-center justify-center font-bold text-lg flex-shrink-0">
-                      {module.number}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        {module.title}
-                      </h3>
-                      <ul className="space-y-2">
-                        {module.topics.map((topic, topicIndex) => (
-                          <li key={topicIndex} className="flex items-center gap-3 text-gray-700">
-                            <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                            {topic}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Course Modules</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { module: "Module 1", title: "Drawing Fundamentals", topics: ["Basic shapes", "Proportions", "Shading techniques"] },
+              { module: "Module 2", title: "Facial Features", topics: ["Eyes", "Nose", "Mouth", "Ears"] },
+              { module: "Module 3", title: "Hair & Textures", topics: ["Different hair types", "Skin textures", "Fabric rendering"] },
+              { module: "Module 4", title: "Complete Portrait", topics: ["Composition", "Final touches", "Professional presentation"] }
+            ].map((module, index) => (
+              <Card key={index} className="border-gray-200">
+                <CardHeader>
+                  <Badge variant="outline" className="w-fit border-gray-400 text-gray-700">{module.module}</Badge>
+                  <CardTitle className="text-gray-900">{module.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {module.topics.map((topic, topicIndex) => (
+                      <li key={topicIndex} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-gray-500 mr-2" />
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             ))}
@@ -246,39 +115,33 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What Our Students Say
-            </h2>
-            <p className="text-xl text-gray-600">
-              Real results from real students who transformed their drawing skills.
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="p-8">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 leading-relaxed mb-6 italic">
-                    "{testimonial.text}"
-                  </p>
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">What Our Students Say</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: "Sarah Johnson", text: "I went from stick figures to realistic portraits in just 3 months! Gleiverson's teaching method is incredible.", rating: 5 },
+              { name: "Mike Chen", text: "The step-by-step approach made everything so clear. I finally understand how to capture likeness!", rating: 5 },
+              { name: "Anna Rodriguez", text: "Best investment I've made in my artistic journey. The community support is amazing too!", rating: 5 }
+            ].map((testimonial, index) => (
+              <Card key={index} className="border-gray-200">
+                <CardHeader>
                   <div className="flex items-center gap-4">
-                    <img 
-                      src={testimonial.photo} 
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
+                    <div className="w-12 h-12 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-semibold">{testimonial.name.split(' ').map(n => n[0]).join('')}</span>
+                    </div>
                     <div>
-                      <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                      <div className="text-sm text-gray-600">Verified Student</div>
+                      <CardTitle className="text-lg text-gray-900">{testimonial.name}</CardTitle>
+                      <div className="flex">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-gray-500 text-gray-500" />
+                        ))}
+                      </div>
                     </div>
                   </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 italic">"{testimonial.text}"</p>
                 </CardContent>
               </Card>
             ))}
@@ -286,140 +149,96 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="py-20 bg-gradient-to-br from-emerald-500 to-emerald-700 text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4">
-              Ready to Transform Your Art?
-            </h2>
-            <p className="text-xl text-emerald-100 mb-12">
-              Get lifetime access to everything you need to master realistic portrait drawing.
-            </p>
-            
-            <Card className="bg-white text-gray-900 border-0 shadow-2xl max-w-md mx-auto">
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <Badge className="bg-red-500 text-white mb-4">Limited Time Offer</Badge>
-                  <div className="space-y-2">
-                    <div className="text-lg text-gray-600 line-through">$297</div>
-                    <div className="text-5xl font-bold text-emerald-600">$97</div>
-                    <div className="text-gray-600">One-time payment</div>
-                  </div>
-                </div>
-                
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-emerald-500" />
-                    <span>Complete 4-module course</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-emerald-500" />
-                    <span>Lifetime access to all materials</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-emerald-500" />
-                    <span>Direct instructor support</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-emerald-500" />
-                    <span>Exclusive community access</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-emerald-500" />
-                    <span>Certificate of completion</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-emerald-500" />
-                    <span>7-day money-back guarantee</span>
-                  </div>
-                </div>
-                
-                <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 text-lg">
-                  Enroll Now - Save $200
-                </Button>
-                
-                <p className="text-sm text-gray-600 mt-4 text-center">
-                  ⏰ Offer expires in 48 hours
-                </p>
-              </CardContent>
-            </Card>
+      {/* Price and Offer */}
+      <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-700 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-8">Limited Time Offer</h3>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+            <div className="text-lg text-gray-300 mb-4">Complete Course Package</div>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="text-3xl text-gray-400 line-through">$297</span>
+              <span className="text-5xl font-bold text-white">$147</span>
+            </div>
+            <Badge variant="outline" className="border-gray-400 text-gray-200 mb-6">Save 50% - Ends December 31st</Badge>
+            <ul className="text-left max-w-md mx-auto space-y-2 mb-8">
+              {[
+                "Complete video course (20+ hours)",
+                "Lifetime access to all materials",
+                "Direct instructor support",
+                "Exclusive community access",
+                "Bonus reference materials",
+                "Certificate of completion"
+              ].map((feature, index) => (
+                <li key={index} className="flex items-center text-gray-200">
+                  <CheckCircle className="w-4 h-4 text-gray-400 mr-2" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
           </div>
+          <Button size="lg" className="bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-600 hover:to-gray-400 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105">
+            Enroll Now - Limited Time!
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </section>
 
       {/* Guarantee */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-8">
-              <Shield className="w-10 h-10 text-emerald-600" />
-            </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              100% Risk-Free Guarantee
-            </h2>
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              We're so confident you'll love this course that we offer a 7-day money-back guarantee. 
-              If you're not completely satisfied with your progress, we'll refund every penny.
-            </p>
-            <p className="text-lg text-gray-600">
-              Your success is our priority. Start learning with complete confidence.
-            </p>
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-400 rounded-full mb-6">
+            <Shield className="w-10 h-10 text-white" />
           </div>
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">7-Day Money-Back Guarantee</h3>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We're so confident you'll love this course that we offer a full refund if you're not completely satisfied within 7 days. No questions asked.
+          </p>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Yes, I Want to Learn Realistic Drawing!
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of students who have transformed their artistic abilities. 
-            Your journey to creating stunning portraits starts today.
+      <section className="py-16 px-4 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-4xl font-bold mb-6">Ready to Transform Your Drawing Skills?</h3>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of students who have already mastered realistic portrait drawing
           </p>
-          <Button 
-            size="lg" 
-            className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-12 py-4 text-xl"
-            onClick={scrollToPrice}
-          >
-            Start My Artistic Journey
+          <Button size="lg" className="bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-600 hover:to-gray-400 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105">
+            Yes, I Want to Learn Realistic Drawing!
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6">
+      <footer className="bg-gray-800 text-gray-300 py-12 px-4">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-2xl font-bold text-emerald-400 mb-4">
-                Realistic Portraits Course
-              </h3>
-              <p className="text-gray-400">
-                Transform your drawing skills with expert guidance from Gleiverson Duarte.
-              </p>
+              <h4 className="text-xl font-semibold text-white mb-4">Contact</h4>
+              <p>support@portraitcourse.com</p>
+              <p>+1 (555) 123-4567</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Contact & Support</h4>
-              <div className="space-y-2 text-gray-400">
-                <p>📧 support@portraitcourse.com</p>
-                <p>📱 Instagram: @gleiverson_art</p>
-                <p>🎥 YouTube: Gleiverson Duarte</p>
+              <h4 className="text-xl font-semibold text-white mb-4">Follow Us</h4>
+              <div className="space-y-2">
+                <p>Instagram: @gleiversonduarte</p>
+                <p>YouTube: Gleiverson Art</p>
+                <p>Facebook: Portrait Mastery</p>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
+              <h4 className="text-xl font-semibold text-white mb-4">Legal</h4>
               <div className="space-y-2">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-                <br />
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                <p><a href="#" className="hover:text-gray-400 transition-colors">Privacy Policy</a></p>
+                <p><a href="#" className="hover:text-gray-400 transition-colors">Terms of Service</a></p>
+                <p><a href="#" className="hover:text-gray-400 transition-colors">Refund Policy</a></p>
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
-            <p>&copy; 2024 Realistic Portraits Course. All rights reserved.</p>
+          <Separator className="my-8 bg-gray-700" />
+          <div className="text-center text-gray-400">
+            <p>&copy; 2024 Realistic Portraits with Gleiverson Duarte. All rights reserved.</p>
           </div>
         </div>
       </footer>
