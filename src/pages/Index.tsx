@@ -2,378 +2,366 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { CheckCircle, Users, Clock, Award, MessageCircle, Shield, Star, ArrowRight, Palette, BookOpen, Video, Download, Eye, Brush, PenTool } from "lucide-react";
+import { CheckCircle, Users, Clock, Award, MessageCircle, Shield, Star, ArrowRight, Palette, BookOpen, Video, Download, Eye, Brush, PenTool, Heart, Brain, Zap } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20 px-4">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-6xl mx-auto text-center">
-          {/* Gleiverson Duarte Logo */}
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Hero Section - Powerful + Minimal */}
+      <section className="relative bg-gradient-to-br from-gray-100 via-gray-50 to-white text-gray-900 py-24 px-4 overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-gray-300 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-gray-400 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative max-w-5xl mx-auto text-center">
           <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-gray-600 to-gray-400 mb-4">
-              <span className="text-2xl font-bold text-white">GD</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent">
-              GLEIVERSON DUARTE
+            <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight">
+              Learn to <span className="font-serif italic">Draw</span>
             </h1>
+            <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto mb-6"></div>
+            <h2 className="text-2xl md:text-3xl font-light text-gray-600 mb-8">
+              and Rediscover the Joy of <span className="italic">Slowing Down</span>
+            </h2>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Aprenda a desenhar retratos realistas <span className="text-orange-500">à mão livre</span>, mesmo que esteja começando do zero.
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Desenhar rostos proporcionais e harmônicos totalmente à mão livre é mais simples do que você imagina.
+          <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+            Master realistic portrait drawing while embracing a calmer, more creative life through our proven V.E.R. method.
           </p>
-          <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105 font-bold">
-            QUERO ENTRAR AGORA
-            <ArrowRight className="ml-2 w-5 h-5" />
+          
+          <Button 
+            size="lg" 
+            className="bg-gray-800 hover:bg-gray-900 text-white px-12 py-6 text-lg rounded-none transition-all duration-300 transform hover:scale-105 font-light tracking-wide shadow-lg"
+          >
+            Join the Course Today
+            <ArrowRight className="ml-3 w-5 h-5" />
           </Button>
+          
+          <p className="text-sm text-gray-500 mt-6 font-light">
+            ✨ 7-day money-back guarantee • Lifetime access
+          </p>
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-16 px-4 bg-gray-50">
+      {/* Emotional Connection Section */}
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8">Veja o que os alunos estão achando do curso.</h3>
-          <div className="bg-gray-300 rounded-lg aspect-video flex items-center justify-center mb-8">
-            <div className="text-gray-600 text-lg">
-              <Video className="w-16 h-16 mx-auto mb-4" />
-              Curso de desenho de retratos - Video Preview
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* V.E.R. Method Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            O ÚNICO MÉTODO QUE É <span className="text-orange-500 underline">À MÃO LIVRE DE VERDADE</span>
-          </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-4xl mx-auto">
-            Diferente de muitos métodos que você precisa gastar com equipamentos como mesa de luz ou outra forma de fazer decalques, na nossa Escola você aprende a fazer os desenhos à mão livre, aprendendo a lógica por trás da estrutura do esboço.
-          </p>
-          <p className="text-lg font-semibold text-gray-900 mb-12">
-            O Método V.E.R. foi pensado para você usar apenas materiais básicos e para que o Hobby de desenhar seja algo simples e acessível!
-          </p>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gray-300 to-transparent mx-auto mb-12"></div>
           
-          <p className="text-lg text-gray-600 mb-8">
-            Imagine a sensação de fazer um desenho como esses abaixo totalmente à mão livre...
-          </p>
-
-          {/* Portrait Examples */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gray-200 rounded-lg aspect-square flex items-center justify-center">
-              <span className="text-gray-600">Portrait Example 1</span>
-            </div>
-            <div className="bg-gray-200 rounded-lg aspect-square flex items-center justify-center">
-              <span className="text-gray-600">Portrait Example 2</span>
-            </div>
-            <div className="bg-gray-200 rounded-lg aspect-square flex items-center justify-center">
-              <span className="text-gray-600">Portrait Example 3</span>
-            </div>
+          <div className="space-y-8 text-lg md:text-xl text-gray-700 leading-relaxed font-light">
+            <p>
+              In our fast-paced world, drawing offers something precious: <strong className="font-medium">the gift of presence</strong>.
+            </p>
+            <p>
+              When you pick up a pencil and focus on creating, your mind naturally calms. The endless chatter quiets. 
+              You become fully absorbed in the gentle rhythm of shading, the careful observation of light and shadow.
+            </p>
+            <p>
+              This isn't just about learning to draw—it's about <strong className="font-medium">reconnecting with yourself</strong> 
+              through the meditative practice of art.
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* You Don't Need to Know How to Draw */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                VOCÊ <span className="text-orange-500">NÃO PRECISA</span> SABER DESENHAR
-              </h3>
-              <div className="space-y-6 text-lg text-gray-700">
-                <p className="font-semibold">Porque eu vou te ensinar como do Zero.</p>
-                <p>
-                  Você terá acesso a aulas com uma didática eficiente para aprender de forma objetiva.
-                </p>
-                <p>
-                  <span className="underline">Não importa se você ainda não sabe nada ou se já desenha.</span> Vou te ensinar desde a base até o desenho final e você terá todo suporte para isso.
-                </p>
-                <p>
-                  E não se engane... mesmo que você já saiba desenhar, você ainda irá aproveitar muito.
-                </p>
-              </div>
-            </div>
-            <div className="flex-1">
-              <div className="bg-gray-300 rounded-lg aspect-square flex items-center justify-center">
-                <span className="text-gray-600">Portrait Drawing Example</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 10 Modules Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            10 MÓDULOS PARA TE ENSINAR <span className="text-orange-500">TUDO SOBRE O MELHOR MÉTODO DE DESENHOS REALISTAS</span> À MÃO LIVRE
-          </h3>
           
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {[
-              { 
-                title: "INTRODUÇÃO", 
-                image: "Portrait sketch", 
-                description: "Fundamentos básicos do desenho realista" 
-              },
-              { 
-                title: "SOMBREADO", 
-                image: "Sphere shading", 
-                description: "Técnicas de luz e sombra" 
-              },
-              { 
-                title: "NARIZ", 
-                image: "Nose detail", 
-                description: "Anatomia e proporções do nariz" 
-              },
-              { 
-                title: "BOCA E LÁBIOS", 
-                image: "Mouth detail", 
-                description: "Estrutura e expressão dos lábios" 
-              },
-              { 
-                title: "OLHOS", 
-                image: "Eye detail", 
-                description: "O elemento mais expressivo do rosto" 
-              },
-              { 
-                title: "PERFIL", 
-                image: "Profile view", 
-                description: "Desenho de perfil e perspectiva lateral" 
-              }
-            ].map((module, index) => (
-              <Card key={index} className="border-gray-200 hover:shadow-lg transition-all duration-300">
-                <CardHeader>
-                  <div className="bg-gray-200 rounded-lg aspect-square flex items-center justify-center mb-4">
-                    <span className="text-gray-600 text-sm">{module.image}</span>
-                  </div>
-                  <CardTitle className="text-gray-900 flex items-center justify-between">
-                    {module.title}
-                    <ArrowRight className="w-5 h-5 text-orange-500" />
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600">{module.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="mt-16 p-8 bg-gray-50 rounded-none shadow-inner">
+            <blockquote className="text-2xl md:text-3xl font-light italic text-gray-600 leading-relaxed">
+              "Art is not what you see, but what you make others feel."
+            </blockquote>
+            <cite className="block mt-4 text-gray-500 font-light">— Edgar Degas</cite>
           </div>
-        </div>
-      </section>
-
-      {/* Bonus Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            TENHA ACESSO COMPLETO AO CURSO <span className="text-orange-500">E RECEBA 6 BÔNUS EXCLUSIVOS!</span>
-          </h3>
-          
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {[
-              {
-                title: "BÔNUS #1",
-                subtitle: "COMO ATRAIR SEGUIDORES E TRANSFORMÁ-LOS EM FÃS E COMPRADORES",
-                description: "O poder da melhoria contínua. Redes sociais - De seguidores a fãs."
-              },
-              {
-                title: "BÔNUS #2", 
-                subtitle: "ENCOMENDAS COM O ARTISTA FÁBIO GONÇALVES",
-                description: "Um bate papo aprendendo com o grande artista Fábio Gonçalves, sobre a experiência dele com encomendas para vários países."
-              },
-              {
-                title: "BÔNUS #3",
-                subtitle: "PLANILHA PARA CONSTRUÇÃO DE NARRAÇÃO DE TUTORIAL", 
-                description: "Nessa aula eu vou te ensinar passo a passo como utilizar a planilha automática que fiz para as narrações dos meus tutoriais."
-              },
-              {
-                title: "BÔNUS #4",
-                subtitle: "EDIÇÃO DE VÍDEO DE ARTE",
-                description: "Nessa aula eu te ensino passo a passo como utilizar o programa Camtasia e editar seus vídeos de desenho."
-              },
-              {
-                title: "BÔNUS #5", 
-                subtitle: "BANCO DE REFERÊNCIAS PARA SEUS EXERCÍCIOS",
-                description: "Vou disponibilizar um banco de imagens pra você baixar e usar como referências nos seus exercícios."
-              }
-            ].map((bonus, index) => (
-              <Card key={index} className="border-gray-200 text-left">
-                <CardHeader>
-                  <Badge variant="outline" className="w-fit border-orange-500 text-orange-600 font-bold">{bonus.title}</Badge>
-                  <CardTitle className="text-gray-900 text-lg">{bonus.subtitle}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 flex items-start">
-                    <span className="text-orange-500 mr-2">✏️</span>
-                    {bonus.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Support Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            <span className="text-orange-500">O Melhor Suporte</span> em um curso de desenho
-          </h3>
-          <p className="text-lg text-gray-600 mb-6">
-            Seus exercícios serão analisados por mim e eu pontuarei onde precisa ser corrigido e se será ou não necessário refazer o exercício.
-          </p>
-          <p className="text-gray-600 mb-6">Você receberá total incentivo dos colegas da sua turma.</p>
-          <p className="text-lg text-gray-700 mb-8">
-            Após 7 dias o professor Gleiverson Duarte entrará em contato com você para te acompanhar na sua jornada e te incluir no grupo.
-          </p>
         </div>
       </section>
 
       {/* About the Instructor */}
-      <section className="py-16 px-4 bg-black text-white">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-8">Quem será o seu professor?</h3>
-          </div>
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-80 h-80 bg-gray-600 rounded-lg flex items-center justify-center">
-              <span className="text-white">Professor Gleiverson Photo</span>
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/3">
+              <div className="w-80 h-80 bg-gradient-to-br from-gray-200 to-gray-300 rounded-none shadow-2xl flex items-center justify-center mx-auto">
+                <span className="text-gray-600 font-light">Professor Gleiverson</span>
+              </div>
             </div>
-            <div className="flex-1 space-y-4 text-lg">
-              <p><strong>Olá, muito prazer. Me chamo Gleiverson Duarte!</strong></p>
+            <div className="lg:w-2/3 space-y-6 text-lg text-gray-700 font-light leading-relaxed">
+              <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-8">
+                Meet Your <span className="italic">Guide</span>
+              </h3>
               <p>
-                Sou desenhista, especializado em retratos realistas à grafite com mais de 20 anos de prática e muito estudo.
+                <strong className="font-medium">Hi, I'm Gleiverson Duarte.</strong> For over 20 years, I've been passionate about 
+                realistic portrait drawing and helping people discover the therapeutic power of art.
               </p>
               <p>
-                Fui professor de desenhos realistas no presencial e agora me dedico aos meus alunos espalhados pelo mundo.
+                I believe that everyone can learn to draw—not just to create beautiful portraits, but to find 
+                a peaceful escape from life's demands. Drawing teaches us patience, observation, and presence.
               </p>
               <p>
-                Depois de uma pausa para trabalhar no varejo de 2010 a 2015, eu descobri que estava infeliz naquela rotina e decidi me reconectar com a arte do realismo e de lá pra cá, estou vivendo os melhores anos da minha vida.
+                Through my V.E.R. method, I help everyday people unlock their creative focus while embracing 
+                a slower, more mindful approach to life. <strong className="font-medium">Art became my way back to peace</strong>, 
+                and I'm here to share that journey with you.
               </p>
-              <p>
-                Hoje sou casado com a Ana, pai da Laura e do Gabriel e gravo as minhas videoaulas no meu estúdio que fica dentro do meu quarto. Através da arte, eu posso estar mais perto da minha família.
-              </p>
-              <p>
-                <strong>E agora, eu quero convidar você para começar a desenhar um novo capítulo da sua vida.</strong>
-              </p>
-              <p className="text-orange-500 font-bold">Você topa?!</p>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white font-bold mt-6">
-                QUERO GARANTIR A MINHA VAGA
-              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Price and Offer */}
-      <section className="py-16 px-4 bg-gray-50">
+      {/* Course Benefits */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+            Why This Course Will <span className="italic">Transform</span> You
+          </h3>
+          <p className="text-xl text-gray-600 font-light mb-16">Beyond drawing skills—discover a new way of being</p>
+          
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                icon: <Heart className="w-8 h-8 text-gray-600" />,
+                title: "No Experience Required",
+                description: "Start from complete beginner and develop real skills at your own gentle pace."
+              },
+              {
+                icon: <Brain className="w-8 h-8 text-gray-600" />,
+                title: "Boost Mental Clarity",
+                description: "Experience the meditative benefits of focused, creative practice."
+              },
+              {
+                icon: <Clock className="w-8 h-8 text-gray-600" />,
+                title: "Lifetime Access",
+                description: "Learn and practice whenever you need a creative pause in life."
+              },
+              {
+                icon: <Users className="w-8 h-8 text-gray-600" />,
+                title: "Mindful Community",
+                description: "Connect with like-minded people on a similar journey of creative growth."
+              },
+              {
+                icon: <Zap className="w-8 h-8 text-gray-600" />,
+                title: "Quick Daily Practice",
+                description: "Just 20-30 minutes a day to develop skills and find your center."
+              },
+              {
+                icon: <Award className="w-8 h-8 text-gray-600" />,
+                title: "Proven Method",
+                description: "The V.E.R. system has helped thousands rediscover joy through art."
+              }
+            ].map((benefit, index) => (
+              <div key={index} className="text-center group">
+                <div className="mb-6 flex justify-center">
+                  <div className="p-4 rounded-full bg-gray-50 group-hover:bg-gray-100 transition-colors duration-300">
+                    {benefit.icon}
+                  </div>
+                </div>
+                <h4 className="text-xl font-medium text-gray-900 mb-4">{benefit.title}</h4>
+                <p className="text-gray-600 font-light leading-relaxed">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Course Structure */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+            Your <span className="italic">Journey</span> Through Art
+          </h3>
+          <p className="text-xl text-gray-600 font-light mb-16">10 carefully crafted modules to guide your transformation</p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: "Foundations", description: "Beginning your artistic journey with mindful observation" },
+              { title: "Light & Shadow", description: "Understanding depth through gentle shading techniques" },
+              { title: "Facial Proportions", description: "The mathematics of beauty in human features" },
+              { title: "Eyes & Expression", description: "Capturing the soul through careful detail" },
+              { title: "Nose & Structure", description: "Building form with confident strokes" },
+              { title: "Mouth & Emotion", description: "Expressing feeling through line and curve" },
+              { title: "Hair & Texture", description: "Creating movement and life in your portraits" },
+              { title: "Skin & Realism", description: "Achieving photorealistic results" },
+              { title: "Profile Views", description: "Mastering different perspectives" },
+              { title: "Complete Portraits", description: "Bringing everything together with confidence" }
+            ].map((module, index) => (
+              <Card key={index} className="border-gray-200 hover:shadow-lg transition-all duration-300 bg-white rounded-none group">
+                <CardHeader className="pb-4">
+                  <div className="w-8 h-8 bg-gray-100 group-hover:bg-gray-200 transition-colors duration-300 mb-4 flex items-center justify-center rounded-full">
+                    <span className="text-gray-600 font-light text-sm">{index + 1}</span>
+                  </div>
+                  <CardTitle className="text-gray-900 text-lg font-medium text-left">{module.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 font-light text-left leading-relaxed">{module.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Student Testimonials */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-16">
+            Stories of <span className="italic">Transformation</span>
+          </h3>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Maria Silva",
+                text: "This course didn't just teach me to draw—it taught me to see. Every session became my daily meditation.",
+                location: "São Paulo"
+              },
+              {
+                name: "João Santos", 
+                text: "After years of stress, drawing became my refuge. The V.E.R. method is incredibly calming and effective.",
+                location: "Rio de Janeiro"
+              },
+              {
+                name: "Ana Costa",
+                text: "I never thought I could create realistic portraits. Now I have a skill that brings me peace daily.",
+                location: "Belo Horizonte"
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 p-8 rounded-none">
+                <div className="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-gray-600 text-xs font-light">{testimonial.name.split(' ').map(n => n[0]).join('')}</span>
+                </div>
+                <p className="text-gray-700 font-light italic mb-6 leading-relaxed">"{testimonial.text}"</p>
+                <div className="text-gray-600 font-light">
+                  <div className="font-medium">{testimonial.name}</div>
+                  <div className="text-sm">{testimonial.location}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-600 rounded-full mb-6">
-              <span className="text-white font-bold">GD</span>
+          <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-8">
+            Invest in Your <span className="italic">Creativity</span> & Peace of Mind
+          </h3>
+          
+          <div className="bg-white rounded-none p-12 shadow-2xl border border-gray-100">
+            <div className="mb-8">
+              <h4 className="text-2xl font-light text-gray-800 mb-4">Complete Drawing & Mindfulness Course</h4>
+              <div className="w-16 h-0.5 bg-gray-300 mx-auto mb-8"></div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">GARANTA JÁ O SEU ACESSO</h3>
-            <h4 className="text-xl font-semibold text-gray-800 mb-6">Curso Desenho Realista à Mão Livre</h4>
             
-            <ul className="text-left max-w-md mx-auto space-y-3 mb-8">
+            <ul className="text-left max-w-md mx-auto space-y-4 mb-12 text-gray-700 font-light">
               {[
-                "Acesso vitalício",
-                "Análises dos exercícios com o professor Gleiverson por 1 ano",
-                "Acesso permanente ao grupo de WhatsApp e comunidade do Facebook"
+                "Lifetime access to all 10 modules",
+                "1 year of personal feedback from Gleiverson",
+                "Exclusive mindful artist community",
+                "6 bonus materials for creative growth",
+                "Mobile-friendly lessons for learning anywhere"
               ].map((feature, index) => (
-                <li key={index} className="flex items-start text-gray-700">
-                  <span className="text-orange-500 mr-2">✏️</span>
+                <li key={index} className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-gray-600 mr-3 mt-0.5 flex-shrink-0" />
                   {feature}
                 </li>
               ))}
             </ul>
 
-            <p className="text-gray-700 mb-4">pelo pagamento único de apenas:</p>
-            
-            <div className="mb-6">
-              <div className="text-5xl font-bold text-orange-500 mb-2">497,00</div>
-              <div className="text-gray-600">Ou 12 x 54,47</div>
+            <div className="mb-8">
+              <div className="text-5xl font-light text-gray-900 mb-2">R$ 497</div>
+              <div className="text-gray-600 font-light">Or 12 monthly payments of R$ 54,47</div>
             </div>
 
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-bold rounded-full w-full mb-4">
-              QUERO GARANTIR O MEU ACESSO
+            <Button 
+              size="lg" 
+              className="bg-gray-800 hover:bg-gray-900 text-white px-12 py-6 text-lg font-light rounded-none w-full mb-6 transition-all duration-300 transform hover:scale-105"
+            >
+              Yes, I'm Ready to Draw and Unwind
             </Button>
             
-            <div className="flex items-center justify-center text-sm text-gray-600">
+            <div className="flex items-center justify-center text-sm text-gray-500 font-light">
               <Shield className="w-4 h-4 mr-2" />
-              Compra segura
+              Secure payment • SSL encrypted
             </div>
           </div>
         </div>
       </section>
 
-      {/* Guarantee */}
-      <section className="py-16 px-4">
+      {/* 7-Day Guarantee */}
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mb-6 relative">
-            <div className="text-white font-bold text-lg">7<br/>DIAS</div>
-            <div className="absolute -top-2 -right-2 text-yellow-600">
-              <Star className="w-6 h-6 fill-current" />
+          <div className="bg-white p-12 rounded-none shadow-lg border border-gray-200">
+            <div className="inline-flex items-center justify-center w-24 h-24 bg-gray-100 rounded-full mb-8">
+              <div className="text-gray-700 font-light text-center">
+                <div className="text-2xl font-medium">7</div>
+                <div className="text-xs">DAYS</div>
+              </div>
             </div>
-          </div>
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            GARANTIA INCONDICIONAL DE <span className="text-yellow-600">7 DIAS</span>
-          </h3>
-          <div className="space-y-4 text-lg text-gray-700 max-w-3xl mx-auto">
-            <p>
-              Você pode assistir as aulas, e se por qualquer motivo você não ficar satisfeito ou não se adaptar, basta entrar em contato com a minha equipe dentro do prazo de 7 dias e solicitar o reembolso do valor investido.
-            </p>
-            <p><strong>Você receberá de volta cada centavo que pagou.</strong></p>
-            <p className="font-semibold">Eu estou tirando todo o risco das suas mãos e colocando nas minhas.</p>
-            <p><strong>Faça sua inscrição agora mesmo e veja com seus próprios olhos.</strong></p>
+            
+            <h3 className="text-3xl font-light text-gray-900 mb-6">
+              Risk-Free <span className="italic">Promise</span>
+            </h3>
+            
+            <div className="space-y-4 text-lg text-gray-700 font-light leading-relaxed max-w-3xl mx-auto">
+              <p>
+                Start your creative journey with complete confidence. If within 7 days you don't feel 
+                this course is helping you develop both your drawing skills and a more mindful approach to life...
+              </p>
+              <p className="font-medium text-gray-900">
+                Simply contact us for a full refund. No questions asked.
+              </p>
+              <p>
+                We believe in the transformative power of art, and we want you to experience it risk-free.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">PERGUNTAS FREQUENTES</h3>
-          <div className="space-y-4">
-            {[
-              "Como vou receber o meu acesso?",
-              "Por quanto tempo terei acesso ao curso?", 
-              "Onde poderei tirar as minhas dúvidas?",
-              "Quais as formas de pagamento?",
-              "É muito caro para começar a fazer desenhos realistas?"
-            ].map((question, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
-                <div className="flex items-center justify-between">
-                  <h4 className="text-lg font-semibold text-gray-900">{question}</h4>
-                  <ArrowRight className="w-5 h-5 text-gray-400" />
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Final Call to Action */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-4xl md:text-5xl font-light text-gray-900 mb-8 leading-tight">
+            Let Drawing Become Your <span className="italic">Daily Pause</span>
+          </h3>
           
-          <div className="text-center mt-12">
-            <p className="text-lg text-gray-700 mb-8">
-              Garanta agora mesmo a sua vaga para o Curso Desenho Realista à Mão Livre e aproveite todos os benefícios e bônus exclusivos para alunos.
-            </p>
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-bold rounded-full">
-              QUERO GARANTIR A MINHA VAGA
-            </Button>
-          </div>
+          <p className="text-xl text-gray-700 font-light mb-12 leading-relaxed">
+            In a world that never stops, give yourself the gift of creative stillness. 
+            Start your journey toward artistic skill and inner calm today.
+          </p>
+          
+          <Button 
+            size="lg" 
+            className="bg-gray-800 hover:bg-gray-900 text-white px-12 py-6 text-xl font-light rounded-none transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            Begin Your Artistic Journey
+            <ArrowRight className="ml-3 w-6 h-6" />
+          </Button>
+          
+          <p className="text-sm text-gray-500 mt-8 font-light">
+            Join thousands who have discovered peace through art
+          </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-gray-300 py-8 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm">Gleiverson Duarte 2023 © - Todos os direitos reservados</p>
+      <footer className="bg-gray-900 text-gray-300 py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <div className="w-16 h-0.5 bg-gray-600 mx-auto mb-6"></div>
+            <div className="flex justify-center space-x-8 mb-8">
+              <a href="#" className="text-gray-400 hover:text-gray-300 transition-colors duration-300">
+                Instagram
+              </a>
+              <a href="#" className="text-gray-400 hover:text-gray-300 transition-colors duration-300">
+                YouTube
+              </a>
+              <a href="#" className="text-gray-400 hover:text-gray-300 transition-colors duration-300">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-gray-400 hover:text-gray-300 transition-colors duration-300">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+          <div className="text-center text-sm text-gray-500 font-light">
+            <p>© 2024 Gleiverson Duarte. All rights reserved.</p>
+            <p className="mt-2">Teaching the art of drawing and the practice of presence.</p>
+          </div>
         </div>
       </footer>
     </div>
